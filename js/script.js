@@ -13,4 +13,23 @@ function uuidv4(){
     return v.toString(16);
   });
 }
-console.log(uuidv4());
+
+const students = [
+  {
+    id: '9a87a4f9-7cd3-4d8d-b725-3d8ac6f5b34c',
+    name: 'Saifur Rahman',
+    email: 'saifurrahman31416@gmail.com'
+  },
+  {
+    id: '06cd4ef7-5e3e-4ede-bcd2-8c16945e1d6b',
+    name: 'Sadia Afrin',
+    email: 'sadiaafrin@gmail.com'
+  },
+  {
+    id: 'c069d541-d673-4191-ac31-91759adfe0cb',
+    name: 'Sultana Najnin',
+    email: 'sultananajnin@gmail.com'
+  }
+];
+
+console.log(students);
