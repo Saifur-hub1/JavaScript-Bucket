@@ -77,6 +77,14 @@ delete students[idToUpdate];
 
 // Traversing in the object
 // console.log(Object.values(students)); // It will give an array type value, so we can traverse it by forEach
+
+console.log('Printing students data using Object.value(): ');
 Object.values(students).forEach((student)=>{
   console.log(student.name, student.email);
+});
+
+// Object.key
+console.log('\nPrinting students data by using Object.key(): ');
+Object.keys(students).forEach((i)=>{
+  console.log(students[i].name, students[i].email);
 });
