@@ -49,10 +49,26 @@ const students = [
 //By using 'students.push({id: '', name: '', email: ''})' we can add new object at the right most side.
 //(Note: It has O(1) time complexity, as it's just added to the right side of the array)
 
+// Create a new student
 students.push({
   id: uuidv4(),
   name: 'Suraiya Najnin',
   email: 'suraiya@gmail.com'
 });
 
-console.log(students);
+const idToUpdate = '06cd4ef7-5e3e-4ede-bcd2-8c16945e1d6b';
+const dataToUpdate = {
+  name: 'Tarek Bin Nur',
+  email: 'tarekbinnur@gmail.com'
+}
+
+// Update method 01
+// It has a great problem while we want only one data or we want to add multiple data at once. So, go ahead to the next method
+const updatedObj = students.find((item)=> item.id===idToUpdate);
+updatedObj.name = dataToUpdate.name;
+updatedObj.email = dataToUpdate.email;
+console.log(updatedObj);
+
+
+
+// console.log(students);
