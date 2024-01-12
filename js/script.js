@@ -79,7 +79,9 @@ students[toUpdateIndex] = {
   ...students[toUpdateIndex],
   ...dataToUpdate
 }
+console.log(students);
 
-
+// Object delete method
+students.splice(toUpdateIndex, 1);
 
 console.log(students);
