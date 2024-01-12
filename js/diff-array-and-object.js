@@ -9,15 +9,18 @@ for(let i=0; i<10000000; i++){
   obj[i] = data;
 }
 
-const id = 4999999;
+const id = 499999;
 console.time('Array taking time: ');
 
-arr.find((item)=>item.id===id)
+const index = arr.findIndex((item)=> item.id===id);
+arr.splice(index,1);
 
 console.timeEnd('Array taking time: ');
 
+
+
 console.time('Object taking time: ');
 
-obj[id].value = 40;
+delete obj[id];
 
 console.timeEnd('Object taking time: ');
