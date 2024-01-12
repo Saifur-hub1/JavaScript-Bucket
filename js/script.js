@@ -66,10 +66,17 @@ students[idToUpdate] = {
   ...dataToUpdate
 };
 
-console.log('Before deleting: ',students);
+// console.log('Before deleting: ',students);
 
 
 // Delete data
 delete students[idToUpdate];
 
-console.log('After deleting: ',students);
+// console.log('After deleting: ',students);
+
+
+// Traversing in the object
+// console.log(Object.values(students)); // It will give an array type value, so we can traverse it by forEach
+Object.values(students).forEach((student)=>{
+  console.log(student.name, student.email);
+});
