@@ -64,11 +64,22 @@ const dataToUpdate = {
 
 // Update method 01
 // It has a great problem while we want only one data or we want to add multiple data at once. So, go ahead to the next method
-const updatedObj = students.find((item)=> item.id===idToUpdate);
-updatedObj.name = dataToUpdate.name;
-updatedObj.email = dataToUpdate.email;
-console.log(updatedObj);
+// const updatedObj = students.find((item)=> item.id===idToUpdate);
+// updatedObj.name = dataToUpdate.name;
+// updatedObj.email = dataToUpdate.email;
+// console.log(updatedObj);
+
+
+//Update method 02 
+// It fixed all bug
+const toUpdateIndex = students.findIndex((item)=> item.id===idToUpdate);
+console.log(toUpdateIndex);
+
+students[toUpdateIndex] = {
+  ...students[toUpdateIndex],
+  ...dataToUpdate
+}
 
 
 
-// console.log(students);
+console.log(students);
