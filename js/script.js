@@ -40,3 +40,14 @@ const students = {
   4. Update
   5. Create new one
 */
+
+// New student added
+const newStudent = {
+  id: '7a15f5fb-b4e4-4b59-8037-fdcde58a45ab',
+  name: `Amirul Islam Siham`,
+  email: `amirulislamsiham@gmail.com`
+}
+
+students[newStudent.id] = newStudent;
+
+console.log(students);
