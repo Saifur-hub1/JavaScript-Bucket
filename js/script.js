@@ -8,11 +8,12 @@
 function uuidv4(){
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c)=>{
     const r = (Math.random() * 16)|0;
-    const v = c == 'x'? r: (r & 0x3) | 0x8;
+    const v = c =='x'? r: (r&0x3) | 0x8;
 
     return v.toString(16);
   });
 }
+
 
 const students = [
   {
@@ -31,5 +32,27 @@ const students = [
     email: 'sultananajnin@gmail.com'
   }
 ];
+
+
+
+/*
+  1. Easily Traverse
+  2. Filter
+  3. Delete
+  4. Update
+  5. Create new one
+*/
+
+//By using 'students.unshift({id: '', name: '', email: ''})' we can add new object at the first index position. 
+//(Note: It has O(n) time complexity, as all elements must shift one position right to insert a value in the left most side)
+
+//By using 'students.push({id: '', name: '', email: ''})' we can add new object at the right most side.
+//(Note: It has O(1) time complexity, as it's just added to the right side of the array)
+
+students.push({
+  id: uuidv4(),
+  name: 'Suraiya Najnin',
+  email: 'suraiya@gmail.com'
+});
 
 console.log(students);
