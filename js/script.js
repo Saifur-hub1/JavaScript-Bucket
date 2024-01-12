@@ -66,4 +66,10 @@ students[idToUpdate] = {
   ...dataToUpdate
 };
 
-console.log(students);
+console.log('Before deleting: ',students);
+
+
+// Delete data
+delete students[idToUpdate];
+
+console.log('After deleting: ',students);
