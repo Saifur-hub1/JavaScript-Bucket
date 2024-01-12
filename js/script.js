@@ -50,4 +50,20 @@ const newStudent = {
 
 students[newStudent.id] = newStudent;
 
+// console.log(students);
+
+// Update data
+// It will work O(1) time complexity
+const idToUpdate = '7a15f5fb-b4e4-4b59-8037-fdcde58a45ab';
+const dataToUpdate = {
+  id: idToUpdate,
+  name: 'Dipti',
+  email: 'dipti@gmail.com'
+}
+
+students[idToUpdate] = {
+  ...students[idToUpdate],
+  ...dataToUpdate
+};
+
 console.log(students);
