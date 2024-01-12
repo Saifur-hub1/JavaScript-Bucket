@@ -77,7 +77,8 @@ delete students[idToUpdate];
 
 // Traversing in the object
 // console.log(Object.values(students)); // It will give an array type value, so we can traverse it by forEach
-
+// ******NOTE: These two methods can be used with same parity. They both are similar time complexity and Space complexity
+// *****NOTE: So you can use both as your wish
 console.log('Printing students data using Object.value(): ');
 Object.values(students).forEach((student)=>{
   console.log(student.name, student.email);
