@@ -44,3 +44,13 @@ data1.reduce((init, curr)=>{
   return init;
 }, []);
 console.timeEnd('Optimized: ');
+
+function myReduce(data2, cb, init){
+  let acc = init;
+  for(let i=0; i<data2.length; i++){
+    acc = cb(acc, data2[i], i, data2);
+  }
+  return acc;
+}
+const sum = myReduce([1,2,3,4], (a,b)=> a+b, 0);
+console.log(sum);
