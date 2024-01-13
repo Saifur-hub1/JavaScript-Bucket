@@ -19,11 +19,28 @@ const result = numbers.reduce((initial, curr)=>{
 
 const ans = numbers.reduce((arr, curr, index)=>{
   
-  console.log('Index: ',index, 'Curr: ',curr, 'arr: ', arr);
+  // console.log('Index: ',index, 'Curr: ',curr, 'arr: ', arr);
 
   if(curr)arr.push(curr.toString());
 
   return arr;
 
 }, []);
-console.log(ans);
+// console.log(ans);
+
+let data1 = [];
+for(let i=1; i<=5000000; i++){
+  data1.push(i);
+}
+
+console.time('Brute force');
+data1.filter((item)=> (item&1)===0).map((item)=> item*2);
+console.timeEnd('Brute force');
+
+console.time('Optimized: ');
+data1.reduce((init, curr)=>{
+  if(!(curr&1)) init.push(curr*2);
+  
+  return init;
+}, []);
+console.timeEnd('Optimized: ');
