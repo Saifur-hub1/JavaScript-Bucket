@@ -54,3 +54,14 @@ function myReduce(data2, cb, init){
 }
 const sum = myReduce([1,2,3,4], (a,b)=> a+b, 0);
 console.log(sum);
+
+const data3 = [1,2,3,'',false, NaN, 4, 5,6];
+const newData = myReduce(data3, (acc, curr)=>{
+  
+  if(curr){
+    acc.push(curr);
+  }
+  return acc;
+}, []);
+
+console.log(newData);
