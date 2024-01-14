@@ -6,7 +6,7 @@ console.log(value.toString());
 
 value();
 
-const ar = [fn, demoFunction];
+const ar = [value, demoFunction];
 const o = {
   fn: demoFunction
 }
@@ -14,3 +14,28 @@ const o = {
 function returnFn(){
   return demoFunction;
 }
+
+// function constFunc(str){
+//   `let obj = {};
+//   for(let s of str){
+//     if(s!==' '){
+//       obj[s] = s;
+//     }
+//   }
+//   return obj;`
+// }
+
+const str = "Saifur Rahman";
+// console.log(constFunc(str));
+
+const demo  = new Function(
+  'str', 
+  `let obj = {};
+  for(let s of str){
+    if(s!==' '){
+      obj[s] = s;
+    }
+  }
+  return obj;`
+);
+console.log(demo(str));
