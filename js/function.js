@@ -28,6 +28,8 @@ function returnFn(){
 const str = "Saifur Rahman";
 // console.log(constFunc(str));
 
+
+//By doing this type of function creation we can generate function in runtime
 const demo  = new Function(
   'str', 
   `let obj = {};
