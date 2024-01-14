@@ -3,3 +3,5 @@ function demoFunction(){
 }
 const value = demoFunction;
 console.log(value);
+
+value();
