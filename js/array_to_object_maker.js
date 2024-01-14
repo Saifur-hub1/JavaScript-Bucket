@@ -28,17 +28,23 @@ const names = [
 const sortedName = names.sort();
 
 const groupNames = sortedName.reduce((arr, curr)=>{
-  const firstLetter = curr[0];
+  const firstLetter = curr[0].toUpperCase();
   if(firstLetter in arr){
-    // console.log(`Found`);
     arr[firstLetter].push(curr);
   }
   else{
     arr[firstLetter] = [curr];
-    // console.log(`Not found ${curr}`); 
   }
-  // console.log('New: ',arr);
-
   return arr;
 },{});
-console.log(groupNames);
+// console.log(groupNames);
+
+
+Object.keys(groupNames).forEach((key)=>{
+  console.log('\n--------',key,'--------');
+
+  groupNames[key].forEach((name)=>{
+    console.log(name);
+  });
+  
+});
