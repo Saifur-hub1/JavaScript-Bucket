@@ -13,6 +13,23 @@ const operations = [
     args: [50, 10],
     params: ['a', 'b'],
     body: 'console.log("Multiplication: ", (a*b))'
+  },
+  {
+    args: [],
+    params: [],
+    body: `console.log('hello saifur');console.log('No parameters, No arguments');`
+  },{
+    args: [10],
+    params: ['n'],
+    body: `
+    for(let i=0; i<n; i++){
+      let line='';
+      for(let j=0; j<n; j++){
+        line+='*';
+      }
+      console.log(line);
+    }
+    `
   }
 ];
 
