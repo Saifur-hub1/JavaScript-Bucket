@@ -10,8 +10,8 @@ const FunBody = FunData.body.reduce((acc, curr)=>{
 
 console.log(FunBody);
 
-const demoFun = new Function(`a, b`, 
+const demoFun = new Function(...FunData.params, 
   `${FunBody}`
 );
 
-console.log(demoFun(1,44));
+console.log(demoFun(100,44));
