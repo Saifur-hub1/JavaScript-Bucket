@@ -16,9 +16,21 @@ async function *getPostsByUser(users){
 
 getUser()
   .then(async (users)=>{
-    const usersIterato = await getPostsByUser(users);
-    // usersIterato.next();
-    console.log(await usersIterato.next());
+    // const usersIterato = await getPostsByUser(users);
+    // await usersIterato.next();
+    // await usersIterato.next();
+    // await usersIterato.next();
+    // await usersIterato.next();
+    // await usersIterato.next();
+    // await usersIterato.next();
+    // await usersIterato.next();
+    // console.log((await usersIterato.next()).value);
+    for await(v of getPostsByUser(users)){
+      console.log(v);
+    }
+    for await(v of getPostsByUser(users)){
+      console.log(v.map((data)=>data.title));
+    }
   })
   .catch((e)=>{
     console.log(e);
