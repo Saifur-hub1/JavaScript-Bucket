@@ -21,7 +21,7 @@ range[Symbol.iterator] = function () {
     }
   }
 }
-for(let v of range){
+for(v of range){
   console.log(v);
 }
 const rangeIterator = range[Symbol.iterator]();
